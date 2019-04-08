@@ -6,13 +6,13 @@ API
 
 方法1:
 
-<audio id="music" src="http://cloud.hunger-valley.com/music/玫瑰.mp3">你的浏览器不支持喔！</audio>
+<audio id="music" src="http://music.163.com/song/media/outer/url?id=26092806">你的浏览器不支持喔！</audio>
 <script>
 var audioObject = document.querySelector('#music')
 </script>
 方法2
 
-var audioObject = new Audio('http://cloud.hunger-valley.com/music/玫瑰.mp3')
+var audioObject = new Audio('http://music.163.com/song/media/outer/url?id=26092806')
 2. audioObject.play()
 开始播放
 
@@ -28,7 +28,7 @@ console.log(audioObject.autoPlay)
 5.audioObject.src
 设置或者获取音乐地址
 
-audioObject.src = "http://cloud.hunger-valley.com/music/ifyou.mp3"
+audioObject.src = "http://music.163.com/song/media/outer/url?id=26092806"
 console.log(audioObject.src)
 6. audioObject.volume
 设置或者获取音量，最大值为1，0为静音
