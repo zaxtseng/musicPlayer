@@ -51,7 +51,7 @@ $('.musicbox .bar').onclick = function(e){
     audio.currentTime = audio.duration * percent
 }
 function getMusicList(callback){
-    var xhr = new XMLHttpRequest()]
+    var xhr = new XMLHttpRequest()
     xhr.open('GET','/music.json',true)
     xhr.onload = function(){
         if((xhr.status >=200 && xhr.status < 300) || xhr.status === 304){
@@ -73,5 +73,5 @@ function loadMusic(musicObj){
     audio.src = musicObj.src
 }
 function generateList(list){
-    
+
 }
