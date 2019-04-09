@@ -73,3 +73,5 @@ function loadMusic(musicObj){
     audio.src = musicObj.src
 }
 }
+function generateList(list){
+}
