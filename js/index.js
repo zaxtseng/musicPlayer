@@ -1,6 +1,12 @@
+var musicList = []
 var currentIndex = 0
+var clock
+var audio = new Audio()
+audio.autoplay = true
+
 getMusicList(function(list){
     loadMusic(list[currentIndex])
+    generateList(list)
 })
 function $(selector){
     return document.querySelector(selector)
@@ -35,7 +41,7 @@ $('.musicbox .play').onclick = function(){
         this.querySelector('.fa').classList.add('fa-play')
         this.querySelector('.fa').classList.remove('fa-pause')
 }
-
+}
 $('.musicbox .forward').onclick = function(){
     currentIndex = (++currentIndex)%musicList.length
     loadMusic(musicList[currentIndex])
@@ -72,6 +78,6 @@ function loadMusic(musicObj){
     $('.cover').style.backgroundImage = 'url(' + musicObj.img +')'
     audio.src = musicObj.src
 }
-}
+
 function generateList(list){
 }
