@@ -72,6 +72,3 @@ function loadMusic(musicObj){
     $('.cover').style.backgroundImage = 'url(' + musicObj.img +')'
     audio.src = musicObj.src
 }
-function generateList(list){
-
-}
