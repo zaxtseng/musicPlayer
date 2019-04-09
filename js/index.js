@@ -27,7 +27,8 @@ audio.onended = function(){
   currentIndex =  (++currentIndex)%musicList.length
   loadMusic(musicList[currentIndex])   
 }
-$('.musicbox .play').onclick = function(){
+window.onload = function(){
+    $('.musicbox .play').onclick = function(){
   if(audio.paused){
     audio.play()
     this.querySelector('.fa').classList.remove('fa-play')
@@ -51,6 +52,7 @@ $('.musicbox .bar').onclick = function(e){
   var percent = e.offsetX / parseInt(getComputedStyle(this).width)
   console.log(percent)
   audio.currentTime = audio.duration * percent
+}
 }
 function $(selector){
   return document.querySelector(selector)
